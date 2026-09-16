@@ -4,7 +4,7 @@
         "documento_estudiante": "12345678",
         "codigo_equipo": "1234",
         "fecha_prestamo": "2026-09-15 17:55:59",
-        "fecha_devolucion": null,
-        "estado": "Prestado"
+        "fecha_devolucion": "2026-09-15 18:31:53",
+        "estado": "Devuelto"
     }
 ]

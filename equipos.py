@@ -2,7 +2,6 @@ from archivos import cargar_datos, guardar_datos
 
 ARCHIVO = "equipos.json"
 
-
 def registrar_equipo():
     equipos = cargar_datos(ARCHIVO)
 
@@ -16,11 +15,23 @@ def registrar_equipo():
     marca = input("Marca: ").strip()
     modelo = input("Modelo: ").strip()
 
+    try:
+        cantidad = int(input("Cantidad disponible: "))
+
+        if cantidad <= 0:
+            print("La cantidad debe ser mayor que 0.")
+            return
+
+    except ValueError:
+        print("Debe ingresar un número entero.")
+        return
+
     equipo = {
         "codigo": codigo,
         "tipo": tipo,
         "marca": marca,
         "modelo": modelo,
+        "cantidad": cantidad,
         "estado": "Disponible"
     }
 
@@ -45,6 +56,7 @@ def listar_equipos():
             f"Tipo: {equipo['tipo']} | "
             f"Marca: {equipo['marca']} | "
             f"Modelo: {equipo['modelo']} | "
+            f"Cantidad: {equipo['cantidad']} | "
             f"Estado: {equipo['estado']}"
         )
 
@@ -71,7 +83,25 @@ def actualizar_estado(codigo, estado):
     return False
 
 
-def eliminar_equipo():
+def actualizar_cantidad(codigo, cantidad):
+    equipos = cargar_datos(ARCHIVO)
+
+    for equipo in equipos:
+        if equipo["codigo"] == codigo:
+            equipo["cantidad"] = cantidad
+
+            if equipo["cantidad"] == 0:
+                equipo["estado"] = "Prestado"
+            else:
+                equipo["estado"] = "Disponible"
+
+            guardar_datos(ARCHIVO, equipos)
+            return True
+
+    return False
+
+
+def inactivar_equipo():
     equipos = cargar_datos(ARCHIVO)
 
     codigo = input("Código del equipo a eliminar: ").strip()
@@ -93,3 +123,4 @@ def eliminar_equipo():
     guardar_datos(ARCHIVO, equipos)
 
     print("Equipo eliminado correctamente.")
+    

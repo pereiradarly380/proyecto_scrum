@@ -1,7 +1,7 @@
 from equipos import (
     registrar_equipo,
     listar_equipos,
-    eliminar_equipo
+    inactivar_equipo
 )
 
 from estudiantes import (
@@ -29,7 +29,7 @@ def mostrar_menu():
     print("6. Registrar devolucion")
     print("7. Consultar equipos prestados")
     print("8. Ver historial de prestamos")
-    print("9. Eliminar equipo")
+    print("9. Eliminar/inactivar equipo")
     print("10. Salir")
     print("==============================")
 
@@ -66,7 +66,7 @@ def main():
             historial_prestamos()
 
         elif opcion == "9":
-            eliminar_equipo()
+            inactivar_equipo()
 
         elif opcion == "10":
             print("Programa finalizado.")

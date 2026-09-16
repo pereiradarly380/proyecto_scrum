@@ -1,22 +1,21 @@
 from datetime import datetime
 
 from archivos import cargar_datos, guardar_datos
-from equipos import buscar_equipo, actualizar_estado
+from equipos import buscar_equipo, actualizar_cantidad
 from estudiantes import buscar_estudiante
 
 ARCHIVO = "prestamos.json"
-
 
 def registrar_prestamo():
     prestamos = cargar_datos(ARCHIVO)
 
     documento = input("Documento del estudiante: ").strip()
-    codigo = input("Codigo del equipo: ").strip()
+    codigo = input("Código del equipo: ").strip()
 
     estudiante = buscar_estudiante(documento)
 
     if estudiante is None:
-        print("El estudiante no esta registrado.")
+        print("El estudiante no está registrado.")
         return
 
     equipo = buscar_equipo(codigo)
@@ -25,31 +24,60 @@ def registrar_prestamo():
         print("El equipo no existe.")
         return
 
-    if equipo["estado"] != "Disponible":
-        print("El equipo no esta disponible.")
+    # Verificar estado
+    if equipo["estado"] == "Inactivo":
+        print("El equipo está inactivo.")
+        return
+
+    if equipo["cantidad"] <= 0:
+        print("No hay unidades disponibles.")
+        return
+
+    try:
+        cantidad = int(input("Ingrese la cantidad: "))
+
+        if cantidad <= 0:
+            print("La cantidad debe ser mayor que 0.")
+            return
+
+    except ValueError:
+        print("Debe ingresar un número entero.")
+        return
+
+    if cantidad > equipo["cantidad"]:
+        print(
+            f"No hay suficiente cantidad disponible. "
+            f"Cantidad disponible: {equipo['cantidad']}"
+        )
         return
 
     prestamo = {
         "id": len(prestamos) + 1,
         "documento_estudiante": documento,
         "codigo_equipo": codigo,
-        "fecha_prestamo": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "cantidad": cantidad,
+        "fecha_prestamo": datetime.now().strftime(
+            "%Y-%m-%d %H:%M:%S"
+        ),
         "fecha_devolucion": None,
         "estado": "Prestado"
     }
 
     prestamos.append(prestamo)
+
     guardar_datos(ARCHIVO, prestamos)
 
-    actualizar_estado(codigo, "Prestado")
+    nueva_cantidad = equipo["cantidad"] - cantidad
 
-    print("Prestamo registrado correctamente.")
+    actualizar_cantidad(codigo, nueva_cantidad)
+
+    print("Préstamo registrado correctamente.")
 
 
 def registrar_devolucion():
     prestamos = cargar_datos(ARCHIVO)
 
-    codigo = input("Codigo del equipo devuelto: ").strip()
+    codigo = input("Código del equipo devuelto: ").strip()
 
     prestamo = None
 
@@ -62,19 +90,30 @@ def registrar_devolucion():
             break
 
     if prestamo is None:
-        print("No existe un prestamo activo para este equipo.")
+        print("No existe un préstamo activo para este equipo.")
         return
+
+    equipo = buscar_equipo(codigo)
+
+    if equipo is None:
+        print("El equipo no existe.")
+        return
+    
+    cantidad_devuelta = prestamo["cantidad"]
 
     prestamo["fecha_devolucion"] = datetime.now().strftime(
         "%Y-%m-%d %H:%M:%S"
     )
+
     prestamo["estado"] = "Devuelto"
 
     guardar_datos(ARCHIVO, prestamos)
 
-    actualizar_estado(codigo, "Disponible")
+    nueva_cantidad = equipo["cantidad"] + cantidad_devuelta
 
-    print("Devolucion registrada correctamente.")
+    actualizar_cantidad(codigo, nueva_cantidad)
+
+    print("Devolución registrada correctamente.")
 
 
 def equipos_prestados():
@@ -96,6 +135,7 @@ def equipos_prestados():
             f"ID: {p['id']} | "
             f"Estudiante: {p['documento_estudiante']} | "
             f"Equipo: {p['codigo_equipo']} | "
+            f"Cantidad: {p['cantidad']} | "
             f"Fecha: {p['fecha_prestamo']}"
         )
 
@@ -104,17 +144,18 @@ def historial_prestamos():
     prestamos = cargar_datos(ARCHIVO)
 
     if not prestamos:
-        print("No hay prestamos registrados.")
+        print("No hay préstamos registrados.")
         return
 
-    print("\n--- HISTORIAL DE PRESTAMOS ---")
+    print("\n--- HISTORIAL DE PRÉSTAMOS ---")
 
     for p in prestamos:
         print(
             f"ID: {p['id']} | "
             f"Estudiante: {p['documento_estudiante']} | "
             f"Equipo: {p['codigo_equipo']} | "
+            f"Cantidad: {p['cantidad']} | "
             f"Estado: {p['estado']} | "
-            f"Prestamo: {p['fecha_prestamo']} | "
-            f"Devolucion: {p['fecha_devolucion']}"
+            f"Préstamo: {p['fecha_prestamo']} | "
+            f"Devolución: {p['fecha_devolucion']}"
         )
