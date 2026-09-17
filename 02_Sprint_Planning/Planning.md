@@ -19,4 +19,4 @@ Durante esta reunión el equipo definió el objetivo del Sprint, revisó las his
 
 ## Evidencia
 
-- Acta de Sprint Planning: [Ver en Google Drive](https://drive.google.com/drive/folders/1ImWrxfQ0gaxUXxIjjGWRlpLKx4DPTQXc?usp=sharing)
+- Acta y video de Sprint Planning: [Ver en Google Drive](https://drive.google.com/drive/folders/1ImWrxfQ0gaxUXxIjjGWRlpLKx4DPTQXc?usp=sharing)
