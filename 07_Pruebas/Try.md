@@ -21,6 +21,5 @@ Se realizarán pruebas relacionadas con:
 
 ## Evidencias
 
-- Casos de prueba: [Ver en Google Drive](PEGAR AQUÍ EL ENLACE DE DRIVE)
-- Resultados de las pruebas: [Ver en Google Drive](PEGAR AQUÍ EL ENLACE DE DRIVE)
-- Capturas o videos: [Ver evidencias](PEGAR AQUÍ EL ENLACE DE DRIVE)
+- Casos de prueba: [Ver en Google Drive](https://drive.google.com/drive/folders/1T8UbHpmo0hJwQJRR0qhNxmrhN_sxrxFQ?usp=sharing)
+

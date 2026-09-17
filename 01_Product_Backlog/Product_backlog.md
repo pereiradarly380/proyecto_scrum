@@ -85,6 +85,7 @@ Como administrador, quiero registrar el préstamo de un equipo a un estudiante.
 
 En esta carpeta se encuentra la evidencia correspondiente al Product Backlog inicial del proyecto.
 
-- Product Backlog: [Ver evidencia en Google Drive](PEGAR AQUÍ EL ENLACE DE DRIVE)
+- Product Backlog: [Ver evidencia en Google Drive](https://drive.google.com/drive/folders/1uSJ9brj_4zEsXGO_05H0g6F6AyePlwRy?usp=sharing)
+- Product Backlog: [Ver evidencia en Google Drive](https://yulianaochoa38.atlassian.net/jira/software/c/projects/SDP/boards/35/backlog?assignee=unassigned%2C712020%3A0bc2ab41-574d-4598-bd9a-33b04f83bba5)
 
 

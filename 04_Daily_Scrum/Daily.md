@@ -16,5 +16,4 @@ El objetivo de los Daily Scrum es revisar el avance, identificar impedimentos y 
 
 ### Daily Scrum #1
 
-- Acta y registro: [Ver acta en Google Drive](PEGAR AQUÍ EL ENLACE DE DRIVE)
-- Grabación del Daily: [Ver video en Google Drive](PEGAR AQUÍ EL ENLACE DE DRIVE)
+- Acta y registro, Grabación del Daily: [Ver en Google Drive](https://drive.google.com/drive/folders/1lc9ArsQ5yqJ0x0lY256gSiOOMv2GVuSz?usp=sharing)

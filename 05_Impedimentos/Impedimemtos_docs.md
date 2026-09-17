@@ -28,5 +28,5 @@ Los impedimentos serán actualizados conforme sean solucionados.
 
 ## Evidencias
 
-- Registro de impedimentos: [Ver en Google Drive](PEGAR AQUÍ EL ENLACE DE DRIVE)
-- Evidencias de solución: [Ver en Google Drive](PEGAR AQUÍ EL ENLACE DE DRIVE)
+- Registro de impedimentos,  Evidencias de solución: [Ver en Google Drive](https://drive.google.com/drive/folders/11iW2XPJ7SjnJv1BshRja3uZOtrhjZtsG?usp=sharing)
+ 

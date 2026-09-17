@@ -20,4 +20,4 @@ Video correspondiente a la demostración del incremento funcional desarrollado d
 
 ### Otras evidencias
 
-[Ver carpeta completa de videos en Google Drive](PEGAR AQUÍ EL ENLACE DE DRIVE)
+[Ver carpeta completa de videos en Google Drive](https://drive.google.com/drive/folders/1izix0P2RUg0jrZHQjak1BevmyYCZcErw?usp=drive_link)

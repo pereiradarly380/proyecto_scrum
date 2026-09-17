@@ -17,7 +17,6 @@ Durante esta reunión el equipo definió el objetivo del Sprint, revisó las his
 - HU03 — Registrar estudiantes — 3 Story Points
 - HU04 — Registrar préstamo de un equipo — 5 Story Points
 
-## Evidencias
+## Evidencia
 
-- Acta de Sprint Planning: [Ver en Google Drive](PEGAR AQUÍ EL ENLACE DE DRIVE)
-- Evidencia de planificación en Jira: [Ver en Google Drive](PEGAR AQUÍ EL ENLACE DE DRIVE)
+- Acta de Sprint Planning: [Ver en Google Drive](https://drive.google.com/drive/folders/1ImWrxfQ0gaxUXxIjjGWRlpLKx4DPTQXc?usp=sharing)

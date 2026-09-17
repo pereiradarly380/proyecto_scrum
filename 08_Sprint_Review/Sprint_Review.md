@@ -21,6 +21,6 @@ El Product Owner revisará el incremento y determinará qué historias cumplen l
 
 ## Evidencias
 
-- Acta de Sprint Review: [Ver en Google Drive](PEGAR AQUÍ EL ENLACE DE DRIVE)
-- Video de la demostración: [Ver en Google Drive](PEGAR AQUÍ EL ENLACE DE DRIVE)
-- Evidencia del incremento: [Ver en Google Drive](PEGAR AQUÍ EL ENLACE DE DRIVE)
+- Acta de Sprint Review y video de la demostracion: [Ver en Google Drive](https://drive.google.com/drive/folders/1K_ALdik7V03dq1rlMRx1MIxTY5YhhVFV?usp=sharing)
+
+- Evidencia del incremento: [Ver en Google Drive](https://drive.google.com/drive/folders/13OiK-tIZP6V1JcO_kXtsUcU-MSKlFbd6?usp=sharing)

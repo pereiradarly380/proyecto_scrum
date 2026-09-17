@@ -32,5 +32,4 @@ Se establecerán acciones concretas, responsables y seguimiento.
 
 ## Evidencias
 
-- Acta de Retrospectiva: [Ver en Google Drive](PEGAR AQUÍ EL ENLACE DE DRIVE)
-- Evidencia de la reunión: [Ver en Google Drive](PEGAR AQUÍ EL ENLACE DE DRIVE)
+- Acta de Retrospectiva y evidencia de la reunion: [Ver en Google Drive](https://drive.google.com/drive/folders/1XKgpG3lsghLtDo6jLFKB6LdOb5VbVxwS?usp=sharing)
