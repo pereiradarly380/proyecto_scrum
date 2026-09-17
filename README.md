@@ -27,3 +27,5 @@ El proyecto se desarrolla utilizando el marco de trabajo Scrum.
 - Python
 - Git
 - GitHub
+- Jira
+

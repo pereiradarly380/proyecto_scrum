@@ -80,3 +80,11 @@ Como administrador, quiero registrar el préstamo de un equipo a un estudiante.
 | HU04 | Registrar préstamo | Alta | 5 |
 
 **Total: 13 Story Points**
+
+## Evidencias
+
+En esta carpeta se encuentra la evidencia correspondiente al Product Backlog inicial del proyecto.
+
+- Product Backlog: [Ver evidencia en Google Drive](PEGAR AQUÍ EL ENLACE DE DRIVE)
+
+
